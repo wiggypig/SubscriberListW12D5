@@ -9,7 +9,7 @@ public class Subscriber {
     // set as primary key and allow database to set the value
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  Long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String userName;
@@ -69,14 +69,10 @@ public class Subscriber {
     // over-ride toString in order to print the data as needed
     @Override
     public String toString() {
-        return "Subscriber{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", userName='" + userName + '\'' +
-                ", signedUp=" + signedUp +
-                '}';
+        return "Subscriber {id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+                + ", signedUp=" + signedUp + "}";
     }
+
 }
 
 

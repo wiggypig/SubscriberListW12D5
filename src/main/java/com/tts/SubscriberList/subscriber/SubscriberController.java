@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ui.Model;
 
+import java.util.Date;
+
 @Controller
 public class SubscriberController {
     // start the app to collect user info from index
@@ -13,8 +15,10 @@ public class SubscriberController {
     private SubscriberRepository subscriberRepository;
 
     @GetMapping(value = "/")
-    public String index(Subscriber subscriber){
+    public String index(Subscriber subscriber, Model model){
         // where the application gets started
+        model.addAttribute("datetime", new Date());
+        model.addAttribute("username", "MrHorne");
         return "subscriber/index";
     }
 
